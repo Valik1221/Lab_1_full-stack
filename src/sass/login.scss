@@ -1,0 +1,130 @@
+@import "sass-def/@imports";
+@import "style";
+html,
+body {
+  background-color: #070707;
+}
+
+.header {
+  background-image: none;
+  overflow: visible;
+}
+// LOGIN
+.login {
+  margin-top: 113px;
+  &__container {
+    @include container;
+  }
+
+  &__form {
+    margin: 0 auto;
+    padding: 35px 30px 30px 40px;
+    max-width: 421px;
+    max-width: 437px;
+    text-align: center;
+    background-color: $dark-bg-color;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-10px, -50%);
+      right: -15px;
+      width: 10px;
+      height: 100%;
+      background: linear-gradient(
+        to left top,
+        $dark-bg-color 50%,
+        transparent 53%
+      );
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(10px, -50%);
+      width: 10px;
+      height: 100%;
+      background: linear-gradient(
+        to right bottom,
+        $dark-bg-color 50%,
+        transparent 53%
+      );
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 2rem;
+    color: $light-color;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: $light-color;
+    margin-top: 26px;
+    display: inline-block;
+  }
+
+  &__input {
+    background-color: #080808;
+    padding: 12px 15px;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: $primary-color;
+    &::placeholder {
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: $primary-color;
+    }
+    &_wrapper {
+      margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  &__check {
+    color: #070707;
+    &_wrapper {
+      @include flex;
+      max-width: 142px;
+      column-gap: 11px;
+    }
+
+    &_text {
+      text-align: left;
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: $primary-color;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    font-weight: 600;
+    color: $primary-color;
+    font-size: 1rem;
+    padding: 15px 80px;
+    border: 2px solid $primary-color;
+    text-align: center;
+    align-self: start;
+    margin: 0 auto;
+    margin-top: 38px;
+  }
+
+  &__forpass {
+    &_link {
+      font-weight: 600;
+      font-size: 0.75rem;
+      color: $light-color;
+      margin-top: 15px;
+    }
+  }
+}
