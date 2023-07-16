@@ -1,0 +1,126 @@
+@import "sass-def/@imports";
+@import "style";
+// HEADER
+.header {
+  overflow: visible;
+}
+// CARD
+.card {
+  margin-top: 44px;
+  &__container {
+    @include container;
+    max-width: 1136px;
+  }
+
+  &__menu {
+    @include flex;
+  }
+
+  &__img {
+    width: 100%;
+    &_wrapper {
+      width: 45%;
+    }
+  }
+
+  &__cta {
+    width: 50%;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 4rem;
+    color: $light-color;
+  }
+
+  &__text {
+    @include text($secondary-color);
+  }
+
+  &__stars {
+    margin-top: 35px;
+  }
+
+  &__prise {
+    font-weight: 600;
+    font-size: 48px;
+    color: $primary-color;
+  }
+
+  &__choose {
+    @include flex;
+    margin-top: 47px;
+    &_item {
+      @include flex;
+      column-gap: 13px;
+    }
+
+    &_text {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: $light-color;
+    }
+
+    &_btn {
+      @include flex;
+      column-gap: 5px;
+    }
+  }
+
+  &__celect {
+    font-weight: 400;
+    font-size: 16px;
+    color: $black-color;
+    background-color: $primary-color;
+    padding: 5px;
+    width: 100%;
+    &_item {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 30px;
+        width: 10px;
+        right: -10px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__btn {
+    padding: 20px 50px;
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px $primary-color solid;
+    font-weight: 700;
+    font-size: 1.125rem;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    color: $primary-color;
+    &_wrapper {
+      @include flex;
+      margin-top: 37px;
+      max-width: 271px;
+    }
+  }
+
+  &__desc {
+    margin-top: 70px;
+    &_title {
+      font-weight: 700;
+      font-size: 2.25rem;
+      color: #f0f0f0;
+    }
+
+    &_text {
+      @include text($secondary-color);
+      margin-top: 35px;
+    }
+  }
+}
