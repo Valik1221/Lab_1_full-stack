@@ -3,6 +3,7 @@
 // HEADER
 .header {
   overflow: visible;
+  background: none;
 }
 // CARD
 .card {
@@ -11,9 +12,31 @@
     @include container;
     max-width: 1136px;
   }
-
+  &__breadcrumbs {
+    @include flex;
+    max-width: 217px;
+    margin: 0 auto;
+    &_link {
+      font-weight: 300;
+      font-size: 1rem;
+      color: $secondary-color;
+      display: block;
+      position: relative;
+      &::after {
+        content: "/";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(11px);
+        right: 0;
+      }
+      &:last-of-type(card__breadcrumbs_link) {
+        color: $primary-color;
+      }
+    }
+  }
   &__menu {
     @include flex;
+    margin-top: 37px;
   }
 
   &__img {
@@ -50,6 +73,8 @@
   &__choose {
     @include flex;
     margin-top: 47px;
+    max-width: 538px;
+
     &_item {
       @include flex;
       column-gap: 13px;
@@ -65,44 +90,61 @@
     &_btn {
       @include flex;
       column-gap: 5px;
+      padding: 5px 20px;
     }
   }
 
-  &__celect {
+  &__select {
     font-weight: 400;
     font-size: 16px;
     color: $black-color;
     background-color: $primary-color;
-    padding: 5px;
     width: 100%;
-    &_item {
+    height: 100%;
+    &_wrapper {
       position: relative;
+      height: 30px;
       &::before {
         content: "";
+        display: block;
         position: absolute;
-        height: 30px;
+        height: 100%;
         width: 10px;
-        right: -10px;
         left: 0;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) translateX(-10px);
+        background: linear-gradient(
+          to left top,
+          $primary-color 50%,
+          transparent 53%
+        );
       }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 10px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(10px);
+        background: linear-gradient(
+          to right bottom,
+          $primary-color 50%,
+          transparent 55%
+        );
+      }
+    }
+    &_item {
+      height: 100%;
     }
   }
 
   &__btn {
+    @include transparent-btn($primary-color, $dark-color);
     padding: 20px 50px;
-    background-color: transparent;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: 2px $primary-color solid;
     font-weight: 700;
     font-size: 1.125rem;
-    font-family: "Inter", sans-serif;
-    text-transform: uppercase;
-    color: $primary-color;
     &_wrapper {
       @include flex;
       margin-top: 37px;
@@ -121,6 +163,145 @@
     &_text {
       @include text($secondary-color);
       margin-top: 35px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .card {
+    &__menu {
+      flex-direction: column;
+      align-items: start;
+    }
+    &__img {
+      &_wrapper {
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+    &__cta {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 588px) {
+  .card {
+    &__title {
+      font-size: 3rem;
+    }
+    &__choose {
+      flex-direction: column;
+      align-items: start;
+      gap: 30px;
+    }
+    &__img {
+      &_wrapper {
+        width: 100%;
+      }
+    }
+  }
+}
+// TESTEMONIALS
+.testemonials {
+  background: none;
+  &__cotainer {
+    @include container;
+    max-width: 1083px;
+  }
+
+  &__start {
+    @include flex;
+    max-width: 380px;
+    text-align: left;
+  }
+
+  &__title {
+    @include small-title($light-color);
+  }
+
+  &__btn {
+    @include transparent-btn($primary-color, $dark-color);
+    padding: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  &__item {
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 114px;
+      margin-top: 42px;
+    }
+  }
+
+  &__user {
+    @include flex;
+    max-width: 291px;
+  }
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    &_wrapper {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: $light-color;
+  }
+
+  &__stars {
+    margin-top: 7px;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: $secondary-color;
+    max-width: 942px;
+    &_wrapper {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      margin-top: 32px;
+    }
+  }
+}
+// BESTSELLER
+.bestseller {
+  margin-top: 130px;
+  &__container {
+    @include container;
+  }
+  &__start {
+    text-align: left;
+  }
+  &__title {
+    @include small-title($light-color);
+  }
+  &__item {
+    &_wrapper {
+      margin-top: 45px;
+    }
+  }
+}
+@media (max-width: 588px) {
+  .testemonials {
+    &__start {
+      flex-direction: column;
+      row-gap: 30px;
+      margin: 0 auto;
+    }
+    &__user {
+      flex-direction: column;
+      row-gap: 10px;
+      margin: 0 auto;
     }
   }
 }

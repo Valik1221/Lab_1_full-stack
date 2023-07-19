@@ -95,6 +95,22 @@
       <main class="main">
         <div class="card">
           <div class="card__container">
+            <ol class="card__breadcrumbs">
+              <li class="сard__breadcrumbs_item">
+                <a href="#" class="card__breadcrumbs_link">Каталог</a>
+              </li>
+              <li class="сard__breadcrumbs_item">
+                <a href="#" class="card__breadcrumbs_link">Худі</a>
+              </li>
+              <li class="сard__breadcrumbs_item">
+                <a
+                  href="#"
+                  style="color: #ffc700"
+                  class="card__breadcrumbs_link"
+                  >Жовте худі</a
+                >
+              </li>
+            </ol>
             <div class="card__menu">
               <div class="card__img_wrapper">
                 <img src="img/yellow__hoodie.png" alt="" class="card__img" />
@@ -107,28 +123,40 @@
                 <div class="card__choose">
                   <div class="card__choose_item">
                     <p class="card__choose_text">Розмір:</p>
-                    <select name="" id="" class="card__celect">
-                      <option value="" class="card__celect_item">XL</option>
-                      <option value="" class="card__celect_item">L</option>
-                      <option value="" class="card__celect_item">M</option>
-                      <option value="" class="card__celect_item">S</option>
-                    </select>
+                    <div class="card__select_wrapper">
+                      <select name="" id="" class="card__select">
+                        <option value="" class="card__select_item">XL</option>
+                        <option value="" class="card__select_item">L</option>
+                        <option value="" class="card__select_item">M</option>
+                        <option value="" class="card__select_item">S</option>
+                      </select>
+                    </div>
                   </div>
                   <div class="card__choose_item">
                     <p class="card__choose_text">Колір:</p>
-                    <select name="" id="" class="card__celect">
-                      <option value="" class="card__celect_item">Білий</option>
-                      <option value="" class="card__celect_item">Чорний</option>
-                      <option value="" class="card__celect_item">Жовтий</option>
-                    </select>
+                    <div class="card__select_wrapper">
+                      <select name="" id="" class="card__select">
+                        <option value="" class="card__select_item">
+                          Білий
+                        </option>
+                        <option value="" class="card__select_item">
+                          Чорний
+                        </option>
+                        <option value="" class="card__select_item">
+                          Жовтий
+                        </option>
+                      </select>
+                    </div>
                   </div>
                   <div class="card__choose_item">
                     <p class="card__choose_text">Кількість:</p>
-                    <span class="card__choose_btn card__celect">
-                      <button class="card__choose_number">-</button>
-                      <p>90</p>
-                      <button class="card__choose_number">+</button>
-                    </span>
+                    <div class="card__select_wrapper">
+                      <span class="card__choose_btn card__select">
+                        <button class="card__choose_number">-</button>
+                        <p>90</p>
+                        <button class="card__choose_number">+</button>
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div class="card__btn_wrapper">
@@ -154,52 +182,151 @@
             </div>
           </div>
         </div>
+        <div class="testemonials">
+          <div class="testemonials__cotainer">
+            <div class="testemonials__start">
+              <h2 class="testemonials__title">Відгуки</h2>
+              <button class="testemonials__btn">Залишити відгук</button>
+            </div>
+            <div class="testemonials__item_wrapper">
+              <div class="testemonials__item">
+                <div class="testemonials__user">
+                  <div class="testemonials__avatar_wrapper">
+                    <img
+                      src="img/testemonials__user_img.png"
+                      alt=""
+                      class="testemonials__avatar"
+                    />
+                  </div>
+                  <div class="testemonials__user_info">
+                    <h4 class="testemonials__name">Дмитро Мілен</h4>
+                    <img
+                      src="img/stars_2.svg"
+                      alt=""
+                      class="testemonials__stars"
+                    />
+                  </div>
+                </div>
+                <div class="testemonials__desc_wrapper">
+                  <p class="testemonials__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Tortor aenean enim, bibendum sed massa tellus in. У ultrices
+                    et egestas vestibulum faucibus in. Eget nunc leo, in
+                    pellentesque. Sed habitant a lectus velit neque. Sed in
+                    accumsan in dictum ac.
+                  </p>
+                </div>
+              </div>
+              <div class="testemonials__item">
+                <div class="testemonials__user">
+                  <div class="testemonials__avatar_wrapper">
+                    <img
+                      src="img/testemonials__user_img.png"
+                      alt=""
+                      class="testemonials__avatar"
+                    />
+                  </div>
+                  <div class="testemonials__user_info">
+                    <h4 class="testemonials__name">Дмитро Мілен</h4>
+                    <img
+                      src="img/stars_2.svg"
+                      alt=""
+                      class="testemonials__stars"
+                    />
+                  </div>
+                </div>
+                <div class="testemonials__desc_wrapper">
+                  <p class="testemonials__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Tortor aenean enim, bibendum sed massa tellus in. У ultrices
+                    et egestas vestibulum faucibus in. Eget nunc leo, in
+                    pellentesque. Sed habitant a lectus velit neque. Sed in
+                    accumsan in dictum ac.
+                  </p>
+                </div>
+              </div>
+              <div class="testemonials__item">
+                <div class="testemonials__user">
+                  <div class="testemonials__avatar_wrapper">
+                    <img
+                      src="img/testemonials__user_img.png"
+                      alt=""
+                      class="testemonials__avatar"
+                    />
+                  </div>
+                  <div class="testemonials__user_info">
+                    <h4 class="testemonials__name">Дмитро Мілен</h4>
+                    <img
+                      src="img/stars_2.svg"
+                      alt=""
+                      class="testemonials__stars"
+                    />
+                  </div>
+                </div>
+                <div class="testemonials__desc_wrapper">
+                  <p class="testemonials__desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Tortor aenean enim, bibendum sed massa tellus in. У ultrices
+                    et egestas vestibulum faucibus in. Eget nunc leo, in
+                    pellentesque. Sed habitant a lectus velit neque. Sed in
+                    accumsan in dictum ac.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="bestseller">
-          <div class="bestseller__item_wrapper">
-            <a href="card_open.html" class="bestseller__item">
-              <div class="bestseller__img_wrapper">
-                <img
-                  src="img/white__tshirt.png"
-                  alt=""
-                  class="bestseller__img"
-                />
-              </div>
-              <p class="bestseller__item_text">Футболка Біла</p>
-              <h4 class="bestseller__prise">230₴</h4>
-            </a>
-            <a href="card_open.html" class="bestseller__item">
-              <div class="bestseller__img_wrapper">
-                <img
-                  src="img/yellow__hoodie.png"
-                  alt=""
-                  class="bestseller__img"
-                />
-              </div>
-              <p class="bestseller__item_text">Футболка Біла</p>
-              <h4 class="bestseller__prise">230₴</h4>
-            </a>
-            <a href="card_open.html" class="bestseller__item">
-              <div class="bestseller__img_wrapper">
-                <img
-                  src="img/white__tshirt.png"
-                  alt=""
-                  class="bestseller__img"
-                />
-              </div>
-              <p class="bestseller__item_text">Футболка Біла</p>
-              <h4 class="bestseller__prise">230₴</h4>
-            </a>
-            <a href="card_open.html" class="bestseller__item">
-              <div class="bestseller__img_wrapper">
-                <img
-                  src="img/yellow__hoodie.png"
-                  alt=""
-                  class="bestseller__img"
-                />
-              </div>
-              <p class="bestseller__item_text">Футболка Біла</p>
-              <h4 class="bestseller__prise">230₴</h4>
-            </a>
+          <div class="bestseller__container">
+            <div class="bestseller__start">
+              <h2 class="bestseller__title">Рекомендуємо вам</h2>
+            </div>
+            <div class="bestseller__item_wrapper">
+              <a href="card_open.html" class="bestseller__item">
+                <div class="bestseller__img_wrapper">
+                  <img
+                    src="img/white__tshirt.png"
+                    alt=""
+                    class="bestseller__img"
+                  />
+                </div>
+                <p class="bestseller__item_text">Футболка Біла</p>
+                <h4 class="bestseller__prise">230₴</h4>
+              </a>
+              <a href="card_open.html" class="bestseller__item">
+                <div class="bestseller__img_wrapper">
+                  <img
+                    src="img/yellow__hoodie.png"
+                    alt=""
+                    class="bestseller__img"
+                  />
+                </div>
+                <p class="bestseller__item_text">Футболка Біла</p>
+                <h4 class="bestseller__prise">230₴</h4>
+              </a>
+              <a href="card_open.html" class="bestseller__item">
+                <div class="bestseller__img_wrapper">
+                  <img
+                    src="img/white__tshirt.png"
+                    alt=""
+                    class="bestseller__img"
+                  />
+                </div>
+                <p class="bestseller__item_text">Футболка Біла</p>
+                <h4 class="bestseller__prise">230₴</h4>
+              </a>
+              <a href="card_open.html" class="bestseller__item">
+                <div class="bestseller__img_wrapper">
+                  <img
+                    src="img/yellow__hoodie.png"
+                    alt=""
+                    class="bestseller__img"
+                  />
+                </div>
+                <p class="bestseller__item_text">Футболка Біла</p>
+                <h4 class="bestseller__prise">230₴</h4>
+              </a>
+            </div>
           </div>
         </div>
       </main>
