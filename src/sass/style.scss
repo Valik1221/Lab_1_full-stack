@@ -230,7 +230,7 @@ body {
         background-repeat: no-repeat;
         width: 756px;
         height: 100%;
-        left: 50%;
+        left: 61%;
         transform: translateX(-50%);
         top: 23px;
         z-index: -1;
@@ -902,6 +902,10 @@ body {
     }
     &__menu {
       max-width: 689px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(83px, 1fr));
+      gap: 30px;
+
       &_item {
         font-weight: 400;
         font-size: 1rem;
@@ -912,11 +916,6 @@ body {
 @media (max-width: 768px) {
   .bestseller {
     margin-top: 100px;
-    &__menu {
-      flex-wrap: wrap;
-      align-items: center;
-      row-gap: 20px;
-    }
     &__item {
       max-width: 100%;
       &_wrapper {
@@ -1068,6 +1067,13 @@ body {
       &_btn {
         display: none;
       }
+    }
+  }
+}
+@media (max-width: 588px) {
+  .testemonials {
+    &__img {
+      width: 80%;
     }
   }
 }
