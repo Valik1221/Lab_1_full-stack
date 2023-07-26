@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="UA">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/login.min.css" />
+    <link rel="stylesheet" href="css/profile.min.css" />
     <title>Document</title>
   </head>
   <body>
@@ -93,32 +93,108 @@
         </div>
       </header>
       <main class="main">
-        <section class="login">
-          <div class="login__container">
-            <form class="login__form">
-              <h2 class="login__title">Вхід</h2>
-              <a href="#" class="login__link">У мене ще немає акаунту</a>
-              <label class="login__input_wrapper">
-                <input
-                  type="email"
-                  class="login__input"
-                  placeholder="Email"
-                  required
-                />
-                <input
-                  type="password"
-                  class="login__input"
-                  placeholder="Пароль"
-                  required
-                />
-                <label class="login__check_wrapper">
-                  <input type="checkbox" class="login__check" />
-                  <p class="login__check_text">Запам'ятати мене</p>
-                </label>
-              </label>
-              <button class="login__btn">Вхід</button>
-              <a href="#" class="login__forpass_link">Забув пароль</a>
-            </form>
+        <section class="profile">
+          <div class="profile__container">
+            <div class="profile__start">
+              <h2 class="profile__title">Профіль</h2>
+              <a href="#" class="profile__exit">Вийти</a>
+            </div>
+            <div class="profile__content_wrapper">
+              <div class="profile__content">
+                <h3 class="profile__content_title">Історія замовлень</h3>
+                <div class="profile__item_container">
+                  <a href="card_open.html" class="profile__item">
+                    <div class="profile__img_wrapper">
+                      <img
+                        src="img/yellow__hoodie.png"
+                        alt=""
+                        class="profile__img"
+                      />
+                    </div>
+                    <div class="profile__cta">
+                      <h3 class="profile__item_title">Жовте худі</h3>
+                      <p class="profile__item_text">худі, одяг</p>
+                      <h2 class="profile__item_prise">1199.00 грн</h2>
+                    </div>
+                  </a>
+                  <a href="card_open.html" class="profile__item">
+                    <div class="profile__img_wrapper">
+                      <img
+                        src="img/yellow__hoodie.png"
+                        alt=""
+                        class="profile__img"
+                      />
+                    </div>
+                    <div class="profile__cta">
+                      <h3 class="profile__item_title">Жовте худі</h3>
+                      <p class="profile__item_text">худі, одяг</p>
+                      <h2 class="profile__item_prise">1199.00 грн</h2>
+                    </div>
+                  </a>
+                  <a href="card_open.html" class="profile__item">
+                    <div class="profile__img_wrapper">
+                      <img
+                        src="img/yellow__hoodie.png"
+                        alt=""
+                        class="profile__img"
+                      />
+                    </div>
+                    <div class="profile__cta">
+                      <h3 class="profile__item_title">Жовте худі</h3>
+                      <p class="profile__item_text">худі, одяг</p>
+                      <h2 class="profile__item_prise">1199.00 грн</h2>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="profile__content">
+                <h3 class="profile__content_title">Обране</h3>
+                <div class="profile__item_container">
+                  <a href="card_open.html" class="profile__item">
+                    <div class="profile__img_wrapper">
+                      <img
+                        src="img/white__tshirt.png"
+                        alt=""
+                        class="profile__img"
+                      />
+                    </div>
+                    <div class="profile__cta">
+                      <h3 class="profile__item_title">Жовте худі</h3>
+                      <p class="profile__item_text">худі, одяг</p>
+                      <h2 class="profile__item_prise">1199.00 грн</h2>
+                    </div>
+                  </a>
+                  <a href="card_open.html" class="profile__item">
+                    <div class="profile__img_wrapper">
+                      <img
+                        src="img/white__tshirt.png"
+                        alt=""
+                        class="profile__img"
+                      />
+                    </div>
+                    <div class="profile__cta">
+                      <h3 class="profile__item_title">Жовте худі</h3>
+                      <p class="profile__item_text">худі, одяг</p>
+                      <h2 class="profile__item_prise">1199.00 грн</h2>
+                    </div>
+                  </a>
+                  <a href="card_open.html" class="profile__item">
+                    <div class="profile__img_wrapper">
+                      <img
+                        src="img/white__tshirt.png"
+                        alt=""
+                        class="profile__img"
+                      />
+                    </div>
+                    <div class="profile__cta">
+                      <h3 class="profile__item_title">Жовте худі</h3>
+                      <p class="profile__item_text">худі, одяг</p>
+                      <h2 class="profile__item_prise">1199.00 грн</h2>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -143,7 +219,7 @@
                 <h3 class="footer__list_title">Інформація</h3>
               </li>
               <li class="footer__list_item">
-                <a href="#" class="footer__list_link">Каталог</a>
+                <a href="catalog.html" class="footer__list_link">Каталог</a>
               </li>
               <li class="footer__list_item">
                 <a href="#" class="footer__list_link">Про нас</a>
@@ -160,7 +236,7 @@
                 <h3 class="footer__list_title">Контакти</h3>
               </li>
               <li class="footer__list_item">
-                <a href="#" class="footer__list_link">Каталог</a>
+                <a href="catalog.html" class="footer__list_link">Каталог</a>
               </li>
               <li class="footer__list_item">
                 <a href="#" class="footer__list_link">Про нас</a>
@@ -173,7 +249,6 @@
               </li>
             </ul>
           </nav>
-
           <div class="footer__reg">
             <div class="footer__reg_start">
               <h3 class="footer__reg_title">Дізнавайся про новинки першим</h3>

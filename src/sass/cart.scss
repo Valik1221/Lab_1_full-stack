@@ -1,0 +1,374 @@
+@import "sass-def/@imports";
+@import "style";
+// HEADER
+.header {
+  overflow: visible;
+  background: none;
+}
+// CART
+.cart {
+  margin-top: 55px;
+  overflow: hidden;
+
+  &__container {
+    @include container;
+  }
+
+  &__start {
+    text-align: center;
+  }
+
+  &__title {
+    @include small-title($light-color);
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 0.6fr 0.75fr 1fr 0.75fr;
+    align-items: center;
+    position: relative;
+    &:hover button {
+      display: flex;
+    }
+    &_wrapper {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 55px;
+    }
+
+    &_start {
+      @include flex;
+    }
+
+    &_title {
+      font-weight: 400;
+      font-size: 2rem;
+      color: $light-color;
+    }
+
+    &_text {
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: $secondary-color;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    &_wrapper {
+      max-width: 164px;
+      overflow: hidden;
+    }
+  }
+
+  &__choose {
+    @include flex;
+    max-width: 325px;
+    align-items: center;
+    &_item {
+      @include flex;
+      column-gap: 13px;
+    }
+
+    &_btn {
+      @include flex;
+      column-gap: 5px;
+      padding: 5px 20px;
+    }
+  }
+
+  &__select {
+    font-weight: 400;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    color: $dark-color;
+    &_wrapper {
+      @include select($primary-color, $dark-color);
+      height: 30px;
+    }
+    &_item {
+      height: 100%;
+    }
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 2rem;
+    color: $primary-color;
+    text-align: right;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $light-color;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    &_wrapper {
+      height: 100%;
+      width: 40px;
+      position: absolute;
+      right: 0;
+      transform: translateX(60px);
+    }
+  }
+}
+@media (max-width: 1140px) {
+  .cart {
+    &__btn {
+      top: 0;
+      transform: translateY(0);
+      &_wrapper {
+        transform: translateX(20px);
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .cart {
+    &__item {
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      row-gap: 30px;
+      justify-items: center;
+      grid-template-areas:
+        "s k p"
+        "h h h";
+      &_start {
+        grid-area: s;
+      }
+    }
+    &__cta {
+      grid-area: k;
+    }
+    &__choose {
+      grid-area: h;
+      grid-column: 1 / 5;
+      justify-self: center;
+      width: 100%;
+    }
+    &__price {
+      grid-area: p;
+      grid-column: 3 / 5;
+      justify-self: end;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .cart {
+    &__item {
+      grid-template-columns: 1fr 2fr 2fr 1fr;
+      row-gap: 30px;
+      justify-items: center;
+      grid-template-areas:
+        "s k p"
+        "h h h";
+      &_start {
+        justify-self: center;
+        grid-column: 2 / 3;
+      }
+    }
+    &__cta {
+      align-self: start;
+      justify-self: center;
+      grid-column: 3 / 4;
+    }
+    &__choose {
+    }
+    &__price {
+      grid-column: 2;
+      align-self: flex-end;
+      text-align: left;
+      align-self: flex-end;
+      grid-column: 3 / 4;
+      justify-self: center;
+    }
+    &__img {
+      &_wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media (max-width: 588px) {
+  .cart {
+    &__item {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "s"
+        "k"
+        "p"
+        "h";
+      &_start {
+        grid-column: auto;
+      }
+    }
+    &__cta {
+      grid-column: auto;
+    }
+    &__price {
+      grid-column: auto;
+    }
+    &__choose {
+      grid-column: auto;
+    }
+  }
+}
+// ORDER
+.order {
+  margin-top: 75px;
+  &__container {
+    @include container;
+  }
+
+  &__start {
+    text-align: center;
+  }
+
+  &__title {
+    @include small-title($light-color);
+  }
+
+  &__content {
+    @include flex;
+    margin-top: 70px;
+    max-width: 949px;
+  }
+
+  &__form {
+    @include flex;
+    max-width: 949px;
+    margin-top: 70px;
+    &_container {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      width: 45%;
+    }
+    &_item {
+      width: 100%;
+      padding: 18px 25px;
+      background-color: $dark-bg-color;
+      font-weight: 400;
+      font-size: 0.75rem;
+      font-family: "Inter", sans-serif;
+      color: $primary-color;
+      &::placeholder {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__cta {
+    width: 45%;
+  }
+
+  &__set {
+    @include flex;
+    &_item {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+    }
+
+    &_title {
+      font-weight: 600;
+      font-size: 1.125rem;
+      color: $light-color;
+    }
+
+    &_check {
+      display: flex;
+      column-gap: 10px;
+    }
+
+    &_input {
+    }
+
+    &_text {
+      font-weight: 400;
+      font-size: 1rem;
+      color: $primary-color;
+    }
+  }
+
+  &__cal {
+    margin-top: 66px;
+    &_item {
+      @include flex;
+      justify-content: start;
+      column-gap: 10px;
+      font-size: 1rem;
+    }
+
+    &_text {
+      font-weight: 500;
+      color: $secondary-color;
+    }
+
+    &_num {
+      font-weight: 400;
+      color: $primary-color;
+    }
+  }
+
+  &__price {
+    margin-top: 30px;
+    &_text {
+      font-weight: 600;
+      font-size: 2rem;
+      color: $light-color;
+    }
+
+    &_num {
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: $primary-color;
+    }
+  }
+
+  &__btn {
+    @include transparent-btn($primary-color, $dark-color);
+    margin-top: 30px;
+    padding: 16px 44px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}
+@media (max-width: 1024px) {
+  .order {
+    &__form {
+      flex-direction: column;
+      row-gap: 30px;
+      &_container {
+        width: 100%;
+      }
+    }
+    &__cta {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .order {
+    &__set {
+      flex-direction: column;
+      align-items: start;
+      row-gap: 30px;
+    }
+    &__btn {
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+}

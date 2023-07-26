@@ -81,6 +81,8 @@ body {
       font-weight: 400;
       font-size: 0.75rem;
       color: $primary-color;
+      position: relative;
+      display: block;
     }
     &_wrapper {
       margin-top: 25px;
@@ -107,14 +109,12 @@ body {
   }
 
   &__btn {
-    display: inline-block;
+    @include transparent-btn($primary-color, $dark-color);
     font-weight: 600;
-    color: $primary-color;
-    font-size: 1rem;
+    display: inline-block;
+    text-transform: capitalize;
     padding: 15px 80px;
-    border: 2px solid $primary-color;
     text-align: center;
-    align-self: start;
     margin: 0 auto;
     margin-top: 38px;
   }
