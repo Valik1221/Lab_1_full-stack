@@ -208,8 +208,20 @@ body {
     padding: 20px 46px;
   }
 
+  @keyframes identifier {
+    0% {
+      opacity: 0%;
+    }
+
+    100% {
+      opacity: 100%;
+    }
+  }
+
   &__img {
     position: relative;
+    animation-duration: 3s;
+    animation-name: identifier;
     &_wrapper {
       position: relative;
       z-index: 2;
@@ -560,6 +572,7 @@ body {
     &_container {
       @include flex;
       margin-top: 90px;
+      max-height: 518px;
     }
 
     &_btn {
@@ -576,10 +589,17 @@ body {
         box-shadow: 0px 0px 24px -1px rgba(255, 199, 0, 1);
       }
     }
+    &_wrapper {
+      @include flex;
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
+    }
 
     &_item {
       max-width: 434px;
       position: relative;
+      display: block;
       z-index: 5;
       cursor: pointer;
       transition: 0.3s;
@@ -588,7 +608,8 @@ body {
         position: absolute;
         width: 434px;
         height: 488px;
-        top: -40%;
+        top: 50%;
+        transform: translateY(-50%);
         left: -35%;
         background-image: url("../img/example__slider_bg.png");
         background-repeat: no-repeat;
@@ -608,6 +629,9 @@ body {
 @media (max-width: 1024px) {
   .example {
     &__slider {
+      &_wrapper {
+        justify-content: center;
+      }
       &_item {
         &:nth-child(3) {
           display: none;
@@ -1051,8 +1075,16 @@ body {
       justify-content: center;
       border-radius: 50%;
     }
+    &_wrapper {
+      @include flex;
+      justify-content: center;
+    }
     &_item {
       margin: 0 auto;
+      max-width: auto;
+    }
+    &_img {
+      max-width: none;
     }
   }
 }
