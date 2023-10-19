@@ -248,7 +248,7 @@ body {
         margin-right: 0;
         &::after {
           width: 485px;
-          height: 70%;
+          height: 100%;
           left: 55%;
         }
       }
@@ -272,7 +272,7 @@ body {
       &_wrapper {
         &::after {
           width: 100%;
-          height: 70%;
+          height: 100%;
           right: 0;
         }
       }
@@ -362,7 +362,7 @@ body {
       &_wrapper {
         &::after {
           background-image: url("../img/header__img_bg\(768px\).png");
-          width: 500px;
+          width: 467px;
           height: 700px;
           top: -10%;
           left: 70%;
@@ -851,28 +851,26 @@ body {
 
   &__menu {
     @include flex;
-    max-width: 905px;
+    max-width: 300px;
     text-align: center;
     margin-top: 95px;
     column-gap: 10px;
     &_item {
       font-size: 1.5rem;
-    }
-
-    &_text {
       font-weight: 400;
       color: $light-color;
+      cursor: pointer;
     }
 
-    &_input {
-      display: none;
-      &:checked + p {
-        background-color: $primary-color;
-        color: $dark-color;
-        font-weight: 600;
-        box-shadow: 0px 0px 16px 0px rgba(255, 199, 0, 1);
-        transition: 0.3s;
-        padding: 9px 24px;
+    &_checked {
+      background-color: $primary-color;
+      color: $dark-color !important;
+      font-weight: 600;
+      transition: 0.3s;
+      padding: 9px 24px;
+      &:hover {
+        color: $light-color !important;
+        box-shadow: 0px 0px 16px 0px $primary-color;
       }
     }
   }
@@ -920,9 +918,6 @@ body {
       }
     }
     &__menu {
-      max-width: 689px;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(83px, 1fr));
       gap: 30px;
 
       &_item {
@@ -1464,4 +1459,8 @@ body {
       flex-direction: column;
     }
   }
+}
+
+.disabled {
+  display: none;
 }
