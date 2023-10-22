@@ -220,6 +220,7 @@ body {
 
   &__img {
     position: relative;
+    max-width: 100%;
     animation-duration: 3s;
     animation-name: identifier;
     &_wrapper {
@@ -619,6 +620,15 @@ body {
         margin-top: -40px;
       }
     }
+    &_field {
+      overflow: hidden;
+      padding: 80px 0;
+    }
+    &_item-wrapper {
+      @include flex;
+      gap: 132px;
+      transition: 0.3s all;
+    }
   }
 }
 
@@ -999,6 +1009,7 @@ body {
   }
 
   &__img {
+    max-width: 100%;
     &_wrapper {
       max-width: 248px;
       height: 248px;
