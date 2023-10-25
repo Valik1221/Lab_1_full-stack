@@ -636,27 +636,22 @@ body {
   transform: rotate(-180deg);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .example {
     &__slider {
-      &_wrapper {
-        justify-content: center;
-      }
-      &_item {
-        &:nth-child(3) {
-          display: none;
-        }
+      &_field {
+        max-width: 712px;
+        margin: 0 auto;
       }
     }
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 900px) {
   .example {
     &__slider {
-      &_item {
-        &:nth-child(2) {
-          display: none;
-        }
+      &_field {
+        max-width: 300px;
       }
     }
   }
@@ -666,9 +661,6 @@ body {
     &__slider {
       &_btn {
         display: none;
-      }
-      &_item {
-        margin: 0 auto;
       }
     }
   }
@@ -886,6 +878,7 @@ body {
   }
 
   &__img {
+    max-width: 100%;
     &_wrapper {
       width: 100%;
       height: 281px;
@@ -1083,14 +1076,9 @@ body {
     }
     &_wrapper {
       @include flex;
-      justify-content: center;
     }
     &_item {
       margin: 0 auto;
-      max-width: auto;
-    }
-    &_img {
-      max-width: none;
     }
   }
 }
@@ -1100,13 +1088,16 @@ body {
       &_btn {
         display: none;
       }
+      &_wrapper {
+        width: 100%;
+      }
     }
   }
 }
 @media (max-width: 588px) {
   .testemonials {
     &__img {
-      width: 80%;
+      max-width: 80%;
     }
   }
 }
