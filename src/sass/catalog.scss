@@ -96,11 +96,17 @@
 
   &__list {
     @include flex;
-    max-width: 306px;
-    margin: 0 auto;
+    display: inline-flex;
     margin-top: 134px;
+    &-wrapper {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      height: 200px;
+    }
 
-    &_link {
+    &_item {
       background-color: $dark-bg-color;
       color: #f0f0f0;
       font-weight: 500;
@@ -111,6 +117,8 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      cursor: pointer;
+      transition: 0.5s;
     }
     &_checked {
       width: 60px;
@@ -118,6 +126,14 @@
       background-color: $primary-color;
       color: $dark-color;
       font-weight: 700;
+    }
+
+    &_item-wrapper {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 0 20px;
     }
   }
 }

@@ -393,7 +393,7 @@ body {
     }
     &__profile {
       min-width: 0;
-      justify-self: end;
+      justify-self: flex-end;
     }
     &__logo {
       width: 100%;
@@ -1078,6 +1078,8 @@ body {
       @include flex;
     }
     &_item {
+      display: flex;
+      justify-content: center;
       margin: 0 auto;
     }
   }
@@ -1096,8 +1098,10 @@ body {
 }
 @media (max-width: 588px) {
   .testemonials {
-    &__img {
-      max-width: 80%;
+    &__slider {
+      &_img {
+        max-width: 80%;
+      }
     }
   }
 }
@@ -1147,7 +1151,7 @@ body {
   &__content {
     @include flex;
     margin-top: 207px;
-    align-items: start;
+    align-items: flex-start;
   }
 
   &__input {
