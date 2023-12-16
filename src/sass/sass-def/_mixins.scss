@@ -95,7 +95,7 @@
   }
 }
 @mixin primary-btn($primary-color, $dark-color) {
-  background-color: $primary-color;
+  background-color: $primary-color !important;
   color: $dark-color;
   display: inline-flex;
   align-self: start;
